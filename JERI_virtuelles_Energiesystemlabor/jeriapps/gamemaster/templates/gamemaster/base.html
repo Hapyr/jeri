@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'gamemaster/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{% static 'gamemaster/css/custom_css.css' %}" rel="stylesheet">
+    <title>{% block title %}My amazing site{% endblock %}</title>
+</head>
+
+<body>
+        {% block nav %}
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Spiele</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      {% if user.is_authenticated %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'all_lobbys' %}">Lobbys</a>
+      </li>
+      {% endif%}
+      {% if request.user.groups.all.0.name == 'Teacher' %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'start_lobby' %}">Start Lobby</a>
+      </li>
+      {% endif %}
+    </ul>
+    <div class="form-inline my-2 my-lg-0">
+    
+      <ul class="navbar-nav mr-auto">
+      {% if user.is_authenticated %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'logout_view' %}"><span class="glyphicon glyphicon-user"></span>Logout</a>
+      </li>
+      {% else %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'login_view' %}">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'register' %}">Registration</a>
+      </li>
+      {% endif %}
+
+    </ul>
+    </div>
+  </div>
+</nav>
+        {% endblock %}
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

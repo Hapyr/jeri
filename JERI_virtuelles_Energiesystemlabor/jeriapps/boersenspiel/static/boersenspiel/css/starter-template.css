@@ -1,0 +1,110 @@
+body {
+	padding-top: 5rem;
+    width:90%;
+    height:90%;
+    font-family:Verdana,Tahoma,Helvetica,sans-serif;
+    font-size:12px;
+    background:#FFFFFF;
+    color:#000000;
+    margin:0;
+    background-color: #FFFFFF;
+    cursor: default;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+#kraftwerkefeld {
+      position: center; 
+      font-size: 0.8em;
+      top:10px;
+      left:20px;
+      width: 650px;
+      height: 480px;
+      padding-top:0px;
+      padding-left:0px;
+}
+div.ueberschrift {
+    background-color: #de402e;/*#7db424*/
+    font-size:14px;
+    font-weight:bold;
+    color: #FFFFFF;
+    width: 200px;
+    height: 2em;
+    text-align: center;
+    vertical-align: middle;
+    display:table-cell;
+    margin-bottom:5px; 
+}
+
+/*Tables*/
+table{
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+    text-align: left;
+}
+
+tr{
+}
+
+th{
+}
+
+th.nowrap{                     /*ohne Umbruch*/
+    white-space:nowrap;
+}
+
+td{
+    border: 1px solid gray;
+    background-color: #FFFFFF;
+    padding: 5px; /*cellpadding*/
+    vertical-align: top;
+    font-family:Verdana,Tahoma,Helvetica,sans-serif;
+}
+
+td.norightborder {
+   border-right: 0px solid;
+}
+td.noleftborder {
+   border-left: 0px solid;
+}
+
+td.topborder {
+   border-top: 3px solid;
+}
+td.noframe{                     /*ohne Rahmen*/
+    border: 0px solid;
+    
+}
+
+td.nowrap{                /*Umbruch*/
+    white-space:nowrap;
+}
+
+td.bg_darkgrey {
+   background-color: #CCCCCC;
+ 
+}
+
+td.bg_lightgrey {
+  background-color: #EEEEEE;
+ 
+}
+
+td.bg_gas {
+  background-color: #CCCCCC;
+}
+
+td.bg_hydro {
+ background-color: #CCCCCC;
+}
+
+td.spacer {
+  width: 55px;
+}
+
+
+td.slider {
+  height: 300px;
+  vertical-align: top;
+}

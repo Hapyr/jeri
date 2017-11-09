@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% extends 'boersenspiel/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="ueberschrift">Adminbereich</div>
+<br />
+<table>
+        <td>
+        <form action="{% url 'admin' %}" method="get">
+            <input type="submit" value="Auktion" name="auktion"/>
+        </form>
+    </td>
+    <td>
+        Führt die Auktion zur aktuellen Runde durch und erstellt ensprechende Grafiken
+    </td>
+    <tr>
+    <td>
+        <form action="{% url 'admin' %}" method="get">
+            <input type="submit" value="nächste Runde" name="neueRunde"/>
+        </form>
+    </td>
+    <td>
+        Beginnt die nächste Runde! FÜHRT KEINE AUKTION DURCH -> Vorher machen!
+    </td>
+    <tr>
+    <td>
+        <form action="{% url 'admin' %}" method="get">
+            <input type="submit" value="Reset All" name="resetAll"/>
+        </form>
+    </td>
+    <td>
+        Löscht alle Spieler, Spielstände und Grafiken, setzt Runde auf 1. 
+    </td>
+    <tr>
+    <td>
+       <form action="{% url 'admin' %}" method="get">
+            <input type="submit" value="Reset Game" name="resetGame"/>
+        </form>
+    </td>
+    <td>
+        Löscht alle Spielstände und Grafiken, setzt Runde auf 1. Behält Spieler bei!
+    </td>
+    <tr>
+    <td>
+        <form action="{% url 'admin' %}" method="get">
+            <input type="submit" value="Lade Standard Daten" name="lade"/>
+        </form>
+    </td>
+    <td>
+        Lädt die Standard Daten wieder ein (Brennstoffpreise, Lastgang etc...)
+    </td>
+    <tr>
+</tr>
+</table>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
+
+{% endblock %}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'boersenspiel/base.html' %}
+
+{% block content %}
+  <h2>Sign up</h2>
+  <form method="post">
+    {% for field in form %}
+	{% csrf_token %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+    {% endfor %}
+    <button type="submit">Sign up</button>
+  </form>
+{% endblock %}

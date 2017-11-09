@@ -1,0 +1,33 @@
+{% extends "gamemaster/base.html" %}
+
+{% block content %}
+
+    <div class="wrapper">
+        <!--
+        {% if request.user.groups.all.0.name == 'Teacher' %}
+            <div class="list_box rounded">Sie sind als 'Teacher' angemeldet</div>
+        {% endif %}
+        -->
+        
+        <div class="list_box rounded">Angemeldet als {{ request.user.groups.all.0 }}</div>
+        <br /><br />
+        <h1>Lobby {{data.lobby_name}}</h1>
+        <br />
+        <h3>Spielmodus: {% if data.lobby_modus == 'bks' %}Bilanzkreisspiel{% elif data.lobby_modus == 'bs' %}Börsenspiel{% else %}Kein Modus verfügbar{% endif %}</h3>
+        <h3>Eingeloggte User: </h3>
+        {% for user in lobby_user %}   
+            <div class="row lobby_box rounded">
+                <div class="col-md-6">{{ user.user.username }}</div> 
+            </div>
+        {% endfor %}
+        <br />
+            {% if data.lobby_modus == 'bks' %}<form action="{% url 'bilanzkreisspiel:gamestart' %}" method="post" name="join_lobby"> {% elif data.lobby_modus == 'bs' %}<form action="{% url 'boersenspiel:handler' %}" method="post" name="join_lobby">{% else %}Kein Modus verfügbar{% endif %}
+             
+            {% csrf_token %}     
+                <button class="btn btn-sm btn-primary "  name="submit" value="Start Game" type="Submit">Zum Spiel</button>
+            </form>   
+        
+        
+    </div>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "gamemaster/base.html" %}
+
+{% block content %}
+
+        <div class="wrapper">
+        
+            <form action="{% url 'all_lobbys' %}" method="post" class="form-signin rounded">
+                {% csrf_token %}
+                <h3 class="form-signin-heading">Login</h3>
+                <font color="red">{{ wrong }}</font>
+                {{form1.as_p}}
+                {% for field in form_login %}
+                    {{ field }}
+        
+                    {% for error in field.errors %}
+                        <p style="color: red">{{ error }}</p>
+                    {% endfor %}
+                {% endfor %}
+                <button type="submit" class="btn btn-lg btn-primary btn-block">Login</button>
+            </form> 
+       </div>
+
+{% endblock %}
+

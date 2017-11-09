@@ -1,0 +1,48 @@
+.wrapper {    
+	margin-top: 80px;
+	margin-bottom: 20px;
+}
+
+.form-signin {
+  max-width: 420px;
+  padding: 30px 38px 66px;
+  margin: 0 auto;
+  background-color: #eee;
+  border: 1px solid #999999;  
+  }
+
+.form-signin-heading {
+  text-align:center;
+  margin-bottom: 30px;
+}
+
+.form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+}
+input[type="password"] {
+  margin-bottom: 20px;
+}
+
+.navbar{
+    height: 100%;
+}
+.lobby_box{
+    background: #e6f8ff;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999999;
+    margin: 5px;
+}
+
+.list_box{
+    background: white;
+    
+}
+.lobby_box input[type="text"] {
+    background: #e6f8ff;
+    border: 0px;
+    color: black;
+}

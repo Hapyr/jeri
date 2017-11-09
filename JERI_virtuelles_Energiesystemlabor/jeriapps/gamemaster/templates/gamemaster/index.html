@@ -1,0 +1,23 @@
+{% extends "gamemaster/base.html" %}
+
+{% block content %}
+
+        <div class="wrapper">
+            <form method="post" class="form-signin rounded">
+            {% csrf_token %}
+            {{form2.as_p}}
+                <h3 class="form-signin-heading">Registrierung</h3>
+    
+                {% for field in form_reg %}
+                    {{ field }}
+        
+                    {% for error in field.errors %}
+                        <p style="color: red">{{ error }}</p>
+                    {% endfor %}
+                {% endfor %}
+                <button type="submit" class="btn btn-lg btn-primary btn-block">Registrieren</button>
+                <font color="red">{{ wrong }}</font>
+            </form>
+       </div>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends 'boersenspiel/base.html' %}
+{% load static %}
+{% block content %}
+        <div class="ueberschrift">Einstellungen</div>
+        <br />
+<form action="{% url 'prefs' %}" method="post">
+    <table>{{form.as_table}}</table>
+    <input type="submit" value="Submit" />  
+</form> 
+{% endblock %}

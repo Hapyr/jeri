@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends 'boersenspiel/base.html' %}
+{% load static %}
+{% block content %}
+<div class="ueberschrift">Preis Verlauf Gesamt
+    <table>
+    <td><img src="{% static 'boersenspiel/images/tmp/Boersenpreise.png' %}" alt="Not Found Boersenpreise" height="300" width="400"></td>
+    </table>
+</div>
+</br>
+<div class="ueberschrift">Merit Order Verlauf Gesamt
+    <table>
+    {% for item in gesamt%}
+    <td><img src="{% static item %}" alt="Picture not found" height="300" width="400"></td>
+    {%endfor%}
+    </table>
+</div>
+</br>
+<div class="ueberschrift">MeritOrder Verlauf {{request.user.username}}
+    <table>
+    {% for item in spieler%}
+    <td><img src="{% static item %}" alt="Picture not found" height="300" width="400"></td>
+    {%endfor%}
+    </table>
+</div>
+</br>
+
+
+{% endblock %}
+

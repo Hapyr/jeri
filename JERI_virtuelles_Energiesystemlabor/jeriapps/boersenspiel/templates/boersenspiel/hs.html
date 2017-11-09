@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'boersenspiel/base.html' %}
+{% load static %}
+{% block content %}
+        <div class="ueberschrift">Highscores</div>
+        <br />
+<table width="300">
+<tr><th>#. Name:</th><th>Gewinn:</th><tr>
+{% for name,gewinn in liste %}
+   <tr><td>{{ name|linenumbers }}</td><td>{{gewinn}} Euro</td></tr>
+{%endfor %}
+</table>
+
+{% endblock %}
+

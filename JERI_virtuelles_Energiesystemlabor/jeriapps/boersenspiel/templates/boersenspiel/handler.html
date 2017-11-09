@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends 'boersenspiel/base.html' %}
+{% load static %}
+{% block content %}
+{% autoescape off %}
+
+    <div id="kraftwerkefeld">
+        <div class="ueberschrift">My Powerplants</div>
+        <br />
+            <table>
+                <td class=noframe><img src="{% static 'boersenspiel/images/coal.png' %}"></td><td class="noframe spacer"></td>
+                <td class=noframe><img src="{% static 'boersenspiel/images/gas.png' %}"></td><td class="noframe spacer"></td>
+                <td class=noframe><img src="{% static 'boersenspiel/images/wasser.png' %}"></td>
+                <tr>{{html}}</tr>
+                <tr><form action="{% url 'handler' %}" method="post">
+                    <td><table>Angebot pro Block Kohle in EUR/MWh<br/>{{ formcoal.as_table}}</table></td><td class="noframe spacer"></td>
+                    <td><table>Angebot pro Block Gas in EUR/MWh<br/>{{ formgas.as_table}}</table></td><td class="noframe spacer"></td>
+                    <td><table>Angebot pro Block Wasser in EUR/MWh<br/>{{ formwater.as_table}}</table></td>
+                    
+                </form> 
+                </tr>
+            </table>
+            <input type="submit" value="Submit" />  
+    </div>
+{% endautoescape %}
+{% endblock %}

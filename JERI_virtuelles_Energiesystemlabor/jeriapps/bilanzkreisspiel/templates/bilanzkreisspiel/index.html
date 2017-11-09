@@ -1,0 +1,73 @@
+{% extends "bilanzkreisspiel/base.html" %}
+
+{% block content %}
+
+
+
+<div id="sidenav_left" class="sidenav sidenav_left">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNavLeft()">&times;</a>
+  <a href="#">Hallo</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<div id="sidenav_right" class="sidenav sidenav_right">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNavRight()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<div class="row">
+  <div class="col-md-1 boerse"><span style="font-size:30px;cursor:pointer" onclick="openNavLeft()">&#9776; Börse</span></div>
+  <div class="col-md-8 middle">
+      <div id="mid_top">
+        Hallo {{ prof.user.username }}
+      </div>
+      <div id="mid">
+        Tag: {{ prof.bks_timeblock.timeblock_day.day_number|add:"1" }}<br />Runde: {{ prof.bks_timeblock.timeblock_number|add:"1" }}
+        <form action="{% url 'bilanzkreisspiel:gamestart' %}" method="post">
+            <input type="submit" class="btn btn-primary" value="Next Day" name="next">
+            <input type="submit" class="btn btn-primary" value="Next Round" name="next">
+            <input type="submit" class="btn btn-primary" value="Reset" name="next">
+        </form>
+      </div>
+  </div>
+  <div class="col-md-3 news">
+<span style="font-size:30px;cursor:pointer" onclick="openNavRight()">&#9776; Newsticker</span></div>
+</div>
+
+
+<script>
+function openNavLeft() {
+    document.getElementById("sidenav_left").style.width = "100%";
+}
+function openNavRight() {
+    document.getElementById("sidenav_right").style.width = "100%";
+}
+function closeNavLeft() {
+    document.getElementById("sidenav_left").style.width = "0";
+}
+function closeNavRight() {
+    document.getElementById("sidenav_right").style.width = "0";
+}
+</script>
+
+
+<div id="footer">
+    <div class="row footer">
+    {% for day in days %}
+        <div class="{% if prof.bks_timeblock.timeblock_day.day_id == day.day_id %}active{% endif %} col">Tag {{ day.day_number|add:1 }}</div>
+    {% endfor %}
+    </div>
+    <div class="row footer">
+    {% for timeblock in timebs %}
+        <div class="{% if prof.bks_timeblock.timeblock_number == timeblock.timeblock_number and prof.bks_timeblock.timeblock_day.day_id == timeblock.timeblock_day_id %}active{% endif %} col">Runde {{ timeblock.timeblock_number|add:1 }}</div>
+    {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}

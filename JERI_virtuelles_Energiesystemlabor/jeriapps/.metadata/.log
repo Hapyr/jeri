@@ -1,0 +1,151 @@
+!SESSION 2017-10-13 10:16:29.886 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-10-13 10:17:18.827
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\svenp'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.brainwy.liclipsetext.shared_core 4 4 2017-10-13 10:17:20.927
+!MESSAGE C:\Program Files\Brainwy\LiClipse 4.2.0\plugins\com.brainwy.liclipse.editor_4.2.0.201709191438\etc\3q6p1auldznibiilmasp7mj29 (Das System kann den angegebenen Pfad nicht finden)
+!STACK 0
+java.io.FileNotFoundException: C:\Program Files\Brainwy\LiClipse 4.2.0\plugins\com.brainwy.liclipse.editor_4.2.0.201709191438\etc\3q6p1auldznibiilmasp7mj29 (Das System kann den angegebenen Pfad nicht finden)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.brainwy.liclipsetext.shared_core.io.FileUtils.writeBytesToFile(FileUtils.java:140)
+	at org.brainwy.liclipsetext.shared_core.io.FileUtils.writeStrToFile(FileUtils.java:133)
+	at com.brainwy.liclipse.editor.lic.CheckRegistered.run(CheckRegistered.java:145)
+!SESSION 2017-10-13 10:17:24.922 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-10-13 10:17:36.441
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\svenp'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.brainwy.liclipsetext.shared_core 4 4 2017-10-13 10:17:38.307
+!MESSAGE C:\Program Files\Brainwy\LiClipse 4.2.0\plugins\com.brainwy.liclipse.editor_4.2.0.201709191438\etc\3q6p1auldznibiilmasp7mj29 (Das System kann den angegebenen Pfad nicht finden)
+!STACK 0
+java.io.FileNotFoundException: C:\Program Files\Brainwy\LiClipse 4.2.0\plugins\com.brainwy.liclipse.editor_4.2.0.201709191438\etc\3q6p1auldznibiilmasp7mj29 (Das System kann den angegebenen Pfad nicht finden)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.brainwy.liclipsetext.shared_core.io.FileUtils.writeBytesToFile(FileUtils.java:140)
+	at org.brainwy.liclipsetext.shared_core.io.FileUtils.writeStrToFile(FileUtils.java:133)
+	at com.brainwy.liclipse.editor.lic.CheckRegistered.run(CheckRegistered.java:145)
+!SESSION 2017-10-13 10:20:22.505 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-10-13 10:20:30.531
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\svenp'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.brainwy.liclipsetext.shared_core 4 4 2017-10-13 10:20:32.447
+!MESSAGE C:\Program Files\Brainwy\LiClipse 4.2.0\plugins\com.brainwy.liclipse.editor_4.2.0.201709191438\etc\3q6p1auldznibiilmasp7mj29 (Das System kann den angegebenen Pfad nicht finden)
+!STACK 0
+java.io.FileNotFoundException: C:\Program Files\Brainwy\LiClipse 4.2.0\plugins\com.brainwy.liclipse.editor_4.2.0.201709191438\etc\3q6p1auldznibiilmasp7mj29 (Das System kann den angegebenen Pfad nicht finden)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.brainwy.liclipsetext.shared_core.io.FileUtils.writeBytesToFile(FileUtils.java:140)
+	at org.brainwy.liclipsetext.shared_core.io.FileUtils.writeStrToFile(FileUtils.java:133)
+	at com.brainwy.liclipse.editor.lic.CheckRegistered.run(CheckRegistered.java:145)
+!SESSION 2017-10-13 10:21:30.503 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  C:\Users\svenp\OneDrive\RWTH\jeri\jeriapps\.pydevproject
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\svenp\OneDrive\RWTH\jeri\jeriapps\.pydevproject
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-10-13 10:21:37.633
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\svenp'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.brainwy.liclipsetext.shared_core 4 4 2017-10-13 10:21:39.593
+!MESSAGE C:\Program Files\Brainwy\LiClipse 4.2.0\plugins\com.brainwy.liclipse.editor_4.2.0.201709191438\etc\3q6p1auldznibiilmasp7mj29 (Das System kann den angegebenen Pfad nicht finden)
+!STACK 0
+java.io.FileNotFoundException: C:\Program Files\Brainwy\LiClipse 4.2.0\plugins\com.brainwy.liclipse.editor_4.2.0.201709191438\etc\3q6p1auldznibiilmasp7mj29 (Das System kann den angegebenen Pfad nicht finden)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.brainwy.liclipsetext.shared_core.io.FileUtils.writeBytesToFile(FileUtils.java:140)
+	at org.brainwy.liclipsetext.shared_core.io.FileUtils.writeStrToFile(FileUtils.java:133)
+	at com.brainwy.liclipse.editor.lic.CheckRegistered.run(CheckRegistered.java:145)
+!SESSION 2017-10-13 10:22:58.536 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-10-13 10:23:06.005
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\svenp'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.brainwy.liclipsetext.shared_core 4 4 2017-10-13 10:23:07.842
+!MESSAGE C:\Program Files\Brainwy\LiClipse 4.2.0\plugins\com.brainwy.liclipse.editor_4.2.0.201709191438\etc\3q6p1auldznibiilmasp7mj29 (Das System kann den angegebenen Pfad nicht finden)
+!STACK 0
+java.io.FileNotFoundException: C:\Program Files\Brainwy\LiClipse 4.2.0\plugins\com.brainwy.liclipse.editor_4.2.0.201709191438\etc\3q6p1auldznibiilmasp7mj29 (Das System kann den angegebenen Pfad nicht finden)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.brainwy.liclipsetext.shared_core.io.FileUtils.writeBytesToFile(FileUtils.java:140)
+	at org.brainwy.liclipsetext.shared_core.io.FileUtils.writeStrToFile(FileUtils.java:133)
+	at com.brainwy.liclipse.editor.lic.CheckRegistered.run(CheckRegistered.java:145)
+!SESSION 2017-10-24 17:22:12.254 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\svenp\Desktop\coding\jeriapps
+
+!ENTRY org.brainwy.liclipsetext.shared_core 4 4 2017-10-24 17:22:20.611
+!MESSAGE C:\Program Files\Brainwy\LiClipse 4.2.0\plugins\com.brainwy.liclipse.editor_4.2.0.201709191438\etc\3q6p1auldznibiilmasp7mj29 (Das System kann den angegebenen Pfad nicht finden)
+!STACK 0
+java.io.FileNotFoundException: C:\Program Files\Brainwy\LiClipse 4.2.0\plugins\com.brainwy.liclipse.editor_4.2.0.201709191438\etc\3q6p1auldznibiilmasp7mj29 (Das System kann den angegebenen Pfad nicht finden)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.brainwy.liclipsetext.shared_core.io.FileUtils.writeBytesToFile(FileUtils.java:140)
+	at org.brainwy.liclipsetext.shared_core.io.FileUtils.writeStrToFile(FileUtils.java:133)
+	at com.brainwy.liclipse.editor.lic.CheckRegistered.run(CheckRegistered.java:145)
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-10-24 17:22:22.442
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\svenp'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

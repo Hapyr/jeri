@@ -1,0 +1,53 @@
+{% extends "gamemaster/base.html" %}
+
+{% load bootstrap3 %}
+
+{% block content %}
+
+    <div class="wrapper">
+        <!--
+        {% if request.user.groups.all.0.name == 'Teacher' %}
+            <div class="list_box rounded">Sie sind als 'Teacher' angemeldet</div>
+        {% endif %}
+        -->
+        
+        <div class="list_box rounded">Angemeldet als {{ request.user.groups.all.0 }}</div>
+        <br /><br />
+        <h1>Lobbyübersicht</h1>
+        <br />
+        <div class="list_box rounded">{{test}}
+        {% for lobby in data %}   
+        {% if lobby.lobby_id > 0 %}   
+        
+            {% if request.user.groups.all.0.name == 'Teacher' %}   
+            
+                <form action="{% url 'lobby' %}" method="post" name="join_lobby">  
+                {% csrf_token %}         
+                    <div class="row lobby_box rounded">
+                        <div class="col-md-4"><input type="text" name="lobbyname" value="{{lobby.lobby_name}}"></div>
+                        <div class="col-md-4">User: {{ lobby.profile_set.count }}</div>
+                        <div class="col-md-3"><button class="btn btn-sm btn-primary float-right"  name="submit" value="Join Lobby" type="Submit">Join Lobby</button></div>
+                        <div class="col-md-1">{% bootstrap_icon "trash" %} delete</div>
+                    </div>
+                </form>
+                
+            {% else %}
+            
+                <form action="{% url 'lobby' %}" method="post" name="join_lobby">  
+                {% csrf_token %}         
+                    <div class="row lobby_box rounded">
+                        <div class="col-md-9"><input type="text" name="lobbyname" value="{{lobby.lobby_name}}"></div>
+                        <div class="col-md-1">User: {{ lobby.profile_set.count }}</div>
+                        <div class="col-md-2"><button class="btn btn-sm btn-primary float-right"  name="submit" value="Join Lobby" type="Submit">Join Lobby</button></div>
+                    </div>
+                </form>
+            
+            {% endif %}
+
+        {% endif %}
+        {% endfor %}
+        </div>
+        
+    </div>
+
+{% endblock %}

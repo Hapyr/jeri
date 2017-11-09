@@ -1,0 +1,29 @@
+{% extends "gamemaster/base.html" %}
+
+{% block content %}
+
+        <div class="wrapper">
+        <form action="start_lobby" method="post" name="Spielleiter_Freischaltung_Form" class="form-signin rounded">       
+            <h3 class="form-signin-heading">Willkommen zur Spielleiterfreischaltung.</h3>
+             {% csrf_token %}
+                {{ form.as_p }}
+                <input type="text" class="form-control" name="name" placeholder="Lobby Name" required=""/>
+                <input type="password" class="form-control" name="PasswordLobby" placeholder="Lobby - Password" required=""/>
+                
+                    <p>Wählen sie einen Spielmodus</p> 
+                    <fieldset>
+                        <input type="radio" id="bks" name="gamemode" value="bks"><label for="bks">&nbsp;&nbsp;Bilanzkreisspiel</label><br> 
+                        <input type="radio" id="bs" name="gamemode" value="bs"><label for="bs">&nbsp;&nbsp;Börsenspiel</label><br> 
+                        <input type="radio" id="ae" name="gamemode" value="ms"><label for="ae">&nbsp;&nbsp;Michaelsspiel</label> 
+                    </fieldset><br />
+                <font color="red">{{ wrong }}</font>
+                <input type="text" class="form-control" name="TeacherName" placeholder="Teacher - Name" required=""/>
+                <input type="password" class="form-control" name="TeacherPassword" placeholder="Teacher - Password" required=""/>                 
+                 
+              <button class="btn btn-lg btn-primary btn-block"  name="submit" value="Login" type="Submit">Lobby erstellen</button>  
+    
+        </form>         
+    </div>
+
+{% endblock %}
+
