@@ -38,8 +38,7 @@ def gamestart(request):
                 init_reset(request)
                 init_game(request)
                 
-            gamer.save()   
-            gamer.save()                 
+            gamer.save()                
             
             mname = request.user.username
             timebs = Timeblock.objects.raw('SELECT bilanzkreisspiel_timeblock.timeblock_id FROM (auth_user INNER JOIN bilanzkreisspiel_day ON auth_user.id = bilanzkreisspiel_day.day_user_id) INNER JOIN bilanzkreisspiel_timeblock ON bilanzkreisspiel_day.day_id=bilanzkreisspiel_timeblock.timeblock_day_id WHERE auth_user.username=%s', [mname])                 
