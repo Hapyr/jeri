@@ -38,6 +38,7 @@ def gamestart(request):
                 init_reset(request)
                 init_game(request)
                 
+            gamer.save()   
             gamer.save()                 
             
             mname = request.user.username
